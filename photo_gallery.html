@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+
+  <div class="dropdown">
+    <div id="dropdownBurgerMenu" class="container dropbtn" onclick="myFunction()">
+      <div class="bar1 dropbtn"></div>
+      <div class="bar2 dropbtn"></div>
+      <div class="bar3 dropbtn"></div>
+    </div>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="our_story.html">Our Story</a>
+      <a href="photo_gallery.html">Photo Gallery</a>
+      <a href="index.html">Gifts and More</a>
+    </div>
+  </div>
+
+  
+  <script>
+
+  function myFunction() {
+    document.getElementById("dropdownBurgerMenu").classList.toggle("change");
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        document.getElementById("dropdownBurgerMenu").classList.toggle("change");
+        openDropdown.classList.remove('show');
+      }
+    }
+    
+  }
+}
+
+  </script>
+
+
+  <div>
+    <h2 class="paragraph_style">
+      Photo gallery
+    </p>
+  </div>
+
+  <div>
+    <div class="split">
+        <div class="left">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp1.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp3.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp5.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp7.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp9.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp11.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp13.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp15.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp17.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp19.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp21.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp23.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp25.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp27.jpg">
+        </div>
+        <div class="right">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp8.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp4.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp2.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp6.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp10.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp12.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp14.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp16.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp18.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp20.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp22.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp24.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp26.jpg">
+            <img class="photo_gallery_images" src="assets/approved_imgs/sp28.jpg">
+        </div>
+      </div>
+  </div>
+  
+
+
+</body>
+
+
+</html>
+
+

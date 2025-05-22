@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Our Story</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="dropdown">
+    <div id="dropdownBurgerMenu" class="container dropbtn" onclick="myFunction()">
+      <div class="bar1 dropbtn"></div>
+      <div class="bar2 dropbtn"></div>
+      <div class="bar3 dropbtn"></div>
+    </div>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="our_story.html">Our Story</a>
+      <a href="photo_gallery.html">Photo Gallery</a>
+      <a href="index.html">Gifts and More</a>
+    </div>
+  </div>
+
+  
+  <script>
+
+  function myFunction() {
+    document.getElementById("dropdownBurgerMenu").classList.toggle("change");
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        document.getElementById("dropdownBurgerMenu").classList.toggle("change");
+        openDropdown.classList.remove('show');
+      }
+    }
+    
+  }
+}
+
+  </script>
+
+  <div>
+    <div class="we_eloped_img">
+        <img class="we_eloped_img" src="assets/we_eloped.png">
+      </div>
+    <h1 class="paragraph_style_1">
+      Our Story
+    </h1>
+    <p class="paragraph_style_1">
+      On April 18th, 2025, we said 'I do' at City Hall in Manhattan - just the two of us. 
+      While we began this chapter privately, please know you are always in our hearts. 
+      We're so grateful for your love, friendship, and support. 
+      Thank you for being such a special part of our lives. 
+      Gifts are not expected! However, if you feel inclined, please scan the QR code for details. 
+    </p>
+  </div>
+
+
+</body>
+
+
+</html>
+
+
