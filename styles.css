@@ -47,7 +47,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 85%;
-  animation: fade 2s ease-in-out;
+  animation: fade_2 2s ease-in-out;
 }
 
 .we_eloped_img {
