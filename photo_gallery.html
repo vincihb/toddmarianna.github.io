@@ -48,6 +48,56 @@ window.onclick = function(event) {
   }
 }
 
+const left_images_lazy = [
+  "assets/approved_imgs/sp5.jpg",
+  "assets/approved_imgs/sp7.jpg",
+  "assets/approved_imgs/sp9.jpg",
+  "assets/approved_imgs/sp11.jpg",
+  "assets/approved_imgs/sp13.jpg",
+  "assets/approved_imgs/sp15.jpg",
+  "assets/approved_imgs/sp17.jpg",
+  "assets/approved_imgs/sp19.jpg",
+  "assets/approved_imgs/sp21.jpg",
+  "assets/approved_imgs/sp23.jpg",
+  "assets/approved_imgs/sp25.jpg",
+  "assets/approved_imgs/sp27.jpg"
+];
+
+const right_images_lazy = [
+  "assets/approved_imgs/sp2.jpg",
+  "assets/approved_imgs/sp6.jpg",
+  "assets/approved_imgs/sp10.jpg",
+  "assets/approved_imgs/sp12.jpg",
+  "assets/approved_imgs/sp14.jpg",
+  "assets/approved_imgs/sp16.jpg",
+  "assets/approved_imgs/sp18.jpg",
+  "assets/approved_imgs/sp20.jpg",
+  "assets/approved_imgs/sp22.jpg",
+  "assets/approved_imgs/sp24.jpg",
+  "assets/approved_imgs/sp26.jpg",
+  "assets/approved_imgs/sp28.jpg"
+];
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM loaded");
+  for (left_image_index in left_images_lazy) {
+    const image = document.createElement("img");
+    image.setAttribute("class", "photo_gallery_images");
+    image.setAttribute("loading", "lazy");
+    image.setAttribute("src", left_images_lazy[left_image_index]);
+    document.getElementById("left-split").append(image);
+  }
+
+  for (right_image_index in right_images_lazy) {
+    const image = document.createElement("img");
+    image.setAttribute("class", "photo_gallery_images");
+    image.setAttribute("loading", "lazy");
+    image.setAttribute("src", right_images_lazy[right_image_index]);
+    document.getElementById("right-split").append(image);
+  }
+  
+});
+
   </script>
 
 
@@ -59,37 +109,13 @@ window.onclick = function(event) {
 
   <div>
     <div class="split">
-        <div class="left">
-            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp1.jpg" alt="assets/background_img.jpg">
-            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp3.jpg" alt="assets/background_img.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp5.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp7.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp9.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp11.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp13.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp15.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp17.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp19.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp21.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp23.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp25.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp27.jpg">
+        <div class="left" id="left-split">
+            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp1.jpg">
+            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp3.jpg">
         </div>
-        <div class="right">
-            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp8.jpg" alt="assets/background_img.jpg">
-            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp4.jpg" alt="assets/background_img.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp2.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp6.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp10.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp12.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp14.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp16.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp18.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp20.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp22.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp24.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp26.jpg">
-            <img class="photo_gallery_images" loading="lazy" src="assets/approved_imgs/sp28.jpg">
+        <div class="right" id="right-split">
+            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp8.jpg">
+            <img class="photo_gallery_images" loading="eager" src="assets/approved_imgs/sp4.jpg">
         </div>
       </div>
   </div>
