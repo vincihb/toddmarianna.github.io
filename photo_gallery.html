@@ -78,8 +78,8 @@ const right_images_lazy = [
   "assets/approved_imgs/sp28.jpg"
 ];
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM loaded");
+window.addEventListener("load", (event) => {
+  console.log("All content loaded");
   for (left_image_index in left_images_lazy) {
     const image = document.createElement("img");
     image.setAttribute("class", "photo_gallery_images");
